@@ -1,0 +1,20 @@
+@startuml
+start
+:**ввод** N;
+:firstDigit = N / 100;
+:secondDigit = (N / 10) % 10;
+:thirdDigit = N % 10;
+if (N < 100 || N > 999) then(да)
+:**вывод** ошибка, введите трехзначное число;
+else(нет)
+if (firstDigit == secondDigit && secondDigit == thirdDigit?) then(да)
+:**вывод** все цифры одинаковые;
+else (нет)
+if (firstDigit != secondDigit || secondDigit != thirdDigit?) then(да)
+:**вывод** цифры разные;
+else(нет)
+endif
+endif
+endif
+stop
+@enduml
